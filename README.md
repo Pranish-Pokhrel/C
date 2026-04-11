@@ -1,1 +1,1 @@
-Repo for learning c
+Repo of me learning c
