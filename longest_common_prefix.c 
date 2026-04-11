@@ -1,0 +1,36 @@
+// a c program to find the longest common prefix string amongst an array of strings
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int n;
+    char strings[100][100];
+    char prefix[100];
+    int len;
+    int i, j,largest;
+
+    printf("Enter the number of string");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++){
+        printf("Enter the %d string\n",i+1);
+        scanf("%s", strings[i]);
+    }
+
+    strcpy(prefix,strings[0]);
+
+    for(i=1;i<n;i++){
+        len=0;
+        while( prefix[len]!=0 && strings[i][len]!=0 && prefix[len] == strings[i][len] ){
+            len++;
+        }
+        prefix[len]='\0';
+    }
+
+    if(strlen(prefix)!=0){
+        printf("The longest common prifix is %s\n",prefix);
+    }else{
+        printf("It does not have a common prefix\n");
+    }
+    return 0;
+}
