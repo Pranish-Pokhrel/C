@@ -1,3 +1,4 @@
+// a simple calculator for 2 digits for all operators
 #include <stdio.h>
 
 int main() {
