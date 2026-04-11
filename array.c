@@ -1,3 +1,4 @@
+// C program to check if a number is in a array
 #include <stdio.h>
 int main(){
     int nums[10],check,i,found;
